@@ -1,0 +1,20 @@
+# This is a sample build configuration for Other.
+# Check our guides at https://confluence.atlassian.com/x/5Q4SMw for more examples.
+# Only use spaces to indent your .yml configuration.
+# -----
+# You can specify a custom docker image from Docker Hub as your build environment.
+image: atlassian/default-image:2
+
+pipelines:
+  branches:
+    master:
+      - step:
+          name: "Deploy"
+          deployment: production
+          script:
+            - export FILENAME=/tmp/backend.tar.gz
+            - tar czf $FILENAME --exclude=.git $BITBUCKET_CLONE_DIR
+            - scp $FILENAME $SERVER:~/
+            - ssh $SERVER 'bash ~/deploy_backend.sh'
+            
+            
