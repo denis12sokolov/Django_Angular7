@@ -1,0 +1,37 @@
+.category-block {
+  margin-left: 50px;
+  margin-bottom: 20px;
+
+  .category-text {
+    text-decoration: none;
+    color: black;
+    text-transform: uppercase;
+    user-select: none;
+    cursor: pointer;
+  }
+
+  .category-text-active {
+    text-decoration: none;
+    color: gray;
+    text-transform: uppercase;
+    user-select: none;
+    cursor: pointer;
+  }
+
+  .subcategory-text {
+    margin-left: 25px;
+    text-decoration: none;
+    color: black;
+    text-transform: uppercase;
+    user-select: none;
+    cursor: pointer;
+  }
+
+  .category-text:hover {
+    color: gray;
+  }
+
+  .subcategory-text:hover {
+    color: gray;
+  }
+}

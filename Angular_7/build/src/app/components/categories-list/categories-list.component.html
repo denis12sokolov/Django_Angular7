@@ -1,0 +1,26 @@
+<div class="row">
+  <div *ngFor="let category of categories">
+    <div
+      *ngIf="product_type===category.name || !product_type"
+      class="d-flex flex-row flex-wrap justify-content-left category-block"
+    >
+      <a
+        [queryParams]="getCategoryLink(category.name)"
+        [routerLink]="['/']"
+        [class]="product_type?'category-text-active font-italic':'category-text font-italic'"
+      >
+        {{category.name | underscoreKiller }}
+      </a>
+      <div *ngIf="product_type===category.name">
+        <a
+          [queryParams]="getSubcategoryLink(subcategory)"
+          [routerLink]="['/']"
+          *ngFor="let subcategory of category.subcategories"
+          class="subcategory-text font-italic"
+        >
+          {{ subcategory | underscoreKiller }}
+        </a>
+      </div>
+    </div>
+  </div>
+</div>

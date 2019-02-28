@@ -1,0 +1,12 @@
+<div class="card transition-scale" (click)="routeToProductURL()">
+  <img [src]="item.url_img" class="img-fluid">
+  <p class="font-italic m-0">{{ item.name }}</p>
+  <div class="price-block">
+    <div [ngClass]="item.discount_price !== '0.00' ? 'price-text m-0':'m-0'">
+      {{ item.list_price | currencyChange:currency:coefficient | currency:currency }}
+    </div>
+    <div *ngIf="item.discount_price !== '0.00'" class="m-0 discount-price">
+      &nbsp;{{ item.discount_price | currencyChange:currency:coefficient | currency:currency }}
+    </div>
+  </div>
+</div>

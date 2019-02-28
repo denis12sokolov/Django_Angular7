@@ -1,0 +1,2 @@
+<app-categories-list [categories]="categories"></app-categories-list>
+<app-product-list [products]="products" (scrollEnd)="nextPage ? getNextPage() : null"></app-product-list>

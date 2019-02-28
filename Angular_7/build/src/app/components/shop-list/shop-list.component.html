@@ -1,0 +1,7 @@
+<div class="d-flex flex-column">
+  <div *ngFor="let shop of shops">
+    <a [queryParams]="{shop_name: shop.shop_name, link__sex: gender}"
+       [routerLink]="['/']"
+       class="shop-name font-weight-light">{{ shop.verbose_name }}</a>
+  </div>
+</div>

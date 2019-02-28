@@ -1,0 +1,18 @@
+# This is a sample build configuration for Other.
+# Check our guides at https://confluence.atlassian.com/x/5Q4SMw for more examples.
+# Only use spaces to indent your .yml configuration.
+# -----
+# You can specify a custom docker image from Docker Hub as your build environment.
+image: atlassian/default-image:2
+
+pipelines:
+  branches:
+    master:
+      - step:
+          name: "Deploy Frontend"
+          deployment: production
+          script:
+            - export FILENAME=/tmp/frontend.tar.gz
+            - tar czf $FILENAME --exclude=.git $BITBUCKET_CLONE_DIR
+            - scp $FILENAME $SERVER:~/
+            - ssh $SERVER 'nohup bash ~/deploy_frontend.sh > PIPELINE_FRONT.out 2> PIPELINE_FRONT.err < /dev/null &'

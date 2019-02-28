@@ -1,0 +1,33 @@
+.container {
+  padding-top: 20px;
+}
+.logo-img{
+  max-width: 100%;
+}
+div {
+  h4 {
+    font-size: 0.8em;
+    margin-bottom: 0;
+  }
+  fa-icon {
+    font-size: 2.1em;
+  }
+}
+
+.menu-item-name {
+  user-select: none;
+  text-decoration: none;
+  cursor: pointer;
+  color: black;
+  font-size: 1.3em;
+}
+
+@media screen and (max-device-width: 991px) {
+  .menu-item-block {
+    flex-flow: row;
+  }
+
+  .menu-item-block a {
+    font-size: 0.7em;
+  }
+}
