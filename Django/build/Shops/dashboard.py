@@ -17,15 +17,26 @@ class CustomIndexDashboard(Dashboard):
                     'external': True,
                 },
                 {
-                    'title': _('Django "django-users" mailing list'),
-                    'url': 'http://groups.google.com/group/django-users',
+                    'title': _('Django documentation'),
+                    'url': 'http://docs.djangoproject.com/',
                     'external': True,
                 },
                 {
-                    'title': _('Django irc channel'),
-                    'url': 'irc://irc.freenode.net/django',
+                    'title': _('Django documentation'),
+                    'url': 'http://docs.djangoproject.com/',
                     'external': True,
                 },
+                {
+                    'title': _('Django documentation'),
+                    'url': 'http://docs.djangoproject.com/',
+                    'external': True,
+                },
+                {
+                    'title': _('Django documentation'),
+                    'url': 'http://docs.djangoproject.com/',
+                    'external': True,
+                },
+                
             ],
             column=0,
             order=0
