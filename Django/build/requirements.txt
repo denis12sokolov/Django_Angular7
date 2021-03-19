@@ -1,6 +1,6 @@
 celery==4.2.1
 Django==2.1.2
-djangorestframework==3.9.0
+djangorestframework==3.11.2
 pytz==2018.5
 attrs==18.2.0
 beautifulsoup4==4.6.3
