@@ -11,7 +11,7 @@ lxml==4.2.5
 multidict==4.4.2
 requests==2.19.1
 selenium==3.14.1
-urllib3==1.23
+urllib3==1.26.5
 yarl==1.2.6
 django-filter==2.0.0
 django-celery-results==1.0.1
